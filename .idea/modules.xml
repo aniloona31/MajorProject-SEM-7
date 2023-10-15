@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Major.iml" filepath="$PROJECT_DIR$/.idea/Major.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Consumer/kafka/kafka.iml" filepath="$PROJECT_DIR$/Consumer/kafka/kafka.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Producer/kafka/kafka (1).iml" filepath="$PROJECT_DIR$/Producer/kafka/kafka (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Producer/kafka/kafka.iml" filepath="$PROJECT_DIR$/Producer/kafka/kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Consumer1/kafka/kafka (1).iml" filepath="$PROJECT_DIR$/Consumer1/kafka/kafka (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Consumer2/kafka/kafka (2).iml" filepath="$PROJECT_DIR$/Consumer2/kafka/kafka (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Consumer3/kafka/kafka (3).iml" filepath="$PROJECT_DIR$/Consumer3/kafka/kafka (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Consumer4/kafka/kafka (4).iml" filepath="$PROJECT_DIR$/Consumer4/kafka/kafka (4).iml" />
     </modules>
   </component>
 </project>

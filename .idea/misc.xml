@@ -5,6 +5,14 @@
       <list>
         <option value="$PROJECT_DIR$/Consumer/kafka/pom.xml" />
         <option value="$PROJECT_DIR$/Producer/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/Producer1/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/Producer2/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/Producer3/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/Producer4/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/Consumer1/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/Consumer2/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/Consumer3/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/Consumer4/kafka/pom.xml" />
       </list>
     </option>
   </component>
