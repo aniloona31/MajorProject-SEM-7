@@ -27,7 +27,7 @@ public class Producer {
         LOG.info("Processed: order->{}", addedOrder);
 
         CompletableFuture<SendResult<Integer, Order>> result = kafkaTemplate
-                .send("orders", order.getId(), order);
+                .send("orders", order);
         result.whenComplete((sr, ex) ->
                 LOG.debug("Sent(key={},partition={}): {}",
                         sr.getProducerRecord().partition(),
