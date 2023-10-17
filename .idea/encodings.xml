@@ -11,5 +11,7 @@
     <file url="file://$PROJECT_DIR$/Consumer4/kafka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Producer/kafka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Producer/kafka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Producer2/kafka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Producer2/kafka/src/main/resources" charset="UTF-8" />
   </component>
 </project>

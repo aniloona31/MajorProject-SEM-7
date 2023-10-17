@@ -15,13 +15,20 @@ public class ProducerController {
     @Autowired
     private Producer producer;
 
-    @PostMapping("/create-order")
+    @PostMapping("/create-order-1")
     public void createOrderRequest(){
         for(int i=0;i<100000;i++){
             Order order = new Order(i,"mobile","iphone",52000,1);
             producer.publish(order);
         }
+    }
 
+    @PostMapping("/create-order-2")
+    public void createOrderRequest2(){
+        for(int i=0;i<100000;i++){
+            Order order = new Order(i,"mobile","iphone",52000,1);
+            producer.publishNew(order);
+        }
     }
 
 }

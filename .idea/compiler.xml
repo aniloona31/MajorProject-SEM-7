@@ -10,6 +10,7 @@
         <module name="kafka (3)" />
         <module name="kafka (2)" />
         <module name="kafka (1)" />
+        <module name="kafka (5)" />
         <module name="kafka" />
         <module name="kafka (4)" />
       </profile>
@@ -20,6 +21,7 @@
       <module name="kafka (2)" target="17" />
       <module name="kafka (3)" target="17" />
       <module name="kafka (4)" target="17" />
+      <module name="kafka (5)" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -29,6 +31,7 @@
       <module name="kafka (2)" options="-parameters" />
       <module name="kafka (3)" options="-parameters" />
       <module name="kafka (4)" options="-parameters" />
+      <module name="kafka (5)" options="-parameters" />
     </option>
   </component>
 </project>

@@ -14,9 +14,8 @@ import java.util.concurrent.CompletableFuture;
 
 @Service
 public class Producer {
-
     @Autowired
-    private KafkaTemplate<Integer, Order> kafkaTemplate;
+    private KafkaTemplate<String, Order> kafkaTemplate;
 
     @Autowired
     private OrderRepostory orderRepostory;
@@ -26,8 +25,21 @@ public class Producer {
         Order addedOrder = orderRepostory.save(order);
         LOG.info("Processed: order->{}", addedOrder);
 
-        CompletableFuture<SendResult<Integer, Order>> result = kafkaTemplate
+        CompletableFuture<SendResult<String, Order>> result = kafkaTemplate
                 .send("orders", order);
+        result.whenComplete((sr, ex) ->
+                LOG.debug("Sent(key={},partition={}): {}",
+                        sr.getProducerRecord().partition(),
+                        sr.getProducerRecord().key(),
+                        sr.getProducerRecord().value()));
+    }
+
+    public void publishNew(Order order){
+        Order addedOrder = orderRepostory.save(order);
+        LOG.info("Processed: order->{}", addedOrder);
+
+        CompletableFuture<SendResult<String, Order>> result = kafkaTemplate
+                .send("orders-1", order);
         result.whenComplete((sr, ex) ->
                 LOG.debug("Sent(key={},partition={}): {}",
                         sr.getProducerRecord().partition(),
