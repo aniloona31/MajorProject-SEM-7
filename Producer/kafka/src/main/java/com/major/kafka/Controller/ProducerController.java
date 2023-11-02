@@ -25,7 +25,7 @@ public class ProducerController {
 
     @PostMapping("/create-order-2")
     public void createOrderRequest2(){
-        for(int i=0;i<100000;i++){
+        for(int i=0;i<25000;i++){
             Order order = new Order(i,"mobile","iphone",52000,1);
             producer.publishNew(order);
         }
