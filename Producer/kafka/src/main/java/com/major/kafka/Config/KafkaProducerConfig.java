@@ -42,7 +42,7 @@ public class KafkaProducerConfig {
 
     @Bean
     public NewTopic topicExample() {
-        return TopicBuilder.name("orders-1")
+        return TopicBuilder.name("orders")
                 .partitions(6)
                 .replicas(1)
                 .build();

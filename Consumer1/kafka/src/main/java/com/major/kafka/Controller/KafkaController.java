@@ -17,8 +17,8 @@ public class KafkaController {
 
     @KafkaListener(
             topics = "orders",
-            id = "order",
-            groupId = "order-1"
+            id = "x",
+            groupId = "a"
     )
     public void listen(Order order){
         log.info("Recieved : {}",order);

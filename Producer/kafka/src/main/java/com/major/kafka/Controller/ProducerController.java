@@ -17,7 +17,7 @@ public class ProducerController {
 
     @PostMapping("/create-order-1")
     public void createOrderRequest(){
-        for(int i=0;i<100000;i++){
+        for(int i=0;i<30000;i++){
             Order order = new Order(i,"mobile","iphone",52000,1);
             producer.publish(order);
         }
@@ -25,7 +25,15 @@ public class ProducerController {
 
     @PostMapping("/create-order-2")
     public void createOrderRequest2(){
-        for(int i=0;i<25000;i++){
+        for(int i=0;i<30000;i++){
+            Order order = new Order(i,"mobile","iphone",52000,1);
+            producer.publishNew(order);
+        }
+    }
+
+    @PostMapping("/create-order-3")
+    public void createOrderRequest3(){
+        for(int i=0;i<30000;i++){
             Order order = new Order(i,"mobile","iphone",52000,1);
             producer.publishNew(order);
         }

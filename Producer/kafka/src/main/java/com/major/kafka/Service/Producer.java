@@ -22,8 +22,8 @@ public class Producer {
 
     private static final Logger LOG = LoggerFactory.getLogger(Producer.class);
     public void publish(Order order){
-        Order addedOrder = orderRepostory.save(order);
-        LOG.info("Processed: order->{}", addedOrder);
+//        Order addedOrder = orderRepostory.save(order);
+        LOG.info("Processed: order->{}", order);
 
         CompletableFuture<SendResult<String, Order>> result = kafkaTemplate
                 .send("orders", order);
@@ -35,8 +35,8 @@ public class Producer {
     }
 
     public void publishNew(Order order){
-        Order addedOrder = orderRepostory.save(order);
-        LOG.info("Processed: order->{}", addedOrder);
+//        Order addedOrder = orderRepostory.save(order);
+        LOG.info("Processed: order->{}", order);
 
         CompletableFuture<SendResult<String, Order>> result = kafkaTemplate
                 .send("orders-1", order);
