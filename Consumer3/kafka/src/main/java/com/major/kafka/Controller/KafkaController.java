@@ -17,11 +17,22 @@ public class KafkaController {
 
     @KafkaListener(
             topics = "orders-1",
-            id = "order",
+            id = "order1",
             groupId = "order-2",
             concurrency = "6"
     )
     public void listen(Order order){
+        log.info("Recieved : {}",order);
+        service.process(order);
+    }
+
+    @KafkaListener(
+            topics = "orders-1",
+            id = "order",
+            groupId = "order-2",
+            concurrency = "6"
+    )
+    public void listen1(Order order){
         log.info("Recieved : {}",order);
         service.process(order);
     }
